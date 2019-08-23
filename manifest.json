@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "仅供娱乐",
+  "version": "0.0.1",
+  "description": "http://www.cuishuai.cc/game/ 仅限此游戏",
+  "permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "images/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+         "http://www.cuishuai.cc/*"
+      ],
+      "js": [
+        "/content_scripts/content_script.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
+}
